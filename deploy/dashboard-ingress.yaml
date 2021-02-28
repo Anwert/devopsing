@@ -7,10 +7,8 @@ spec:
   rules:
     - http:
         paths:
-          - path: /dashboard
-            pathType: Prefix
-            backend:
-              service:
-                name: kubernetes-dashboard
-                port:
-                  number: 80
+        - backend:
+          service:
+            name: kubernetes-dashboard
+            port:
+              number: 80
