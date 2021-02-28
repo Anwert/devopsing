@@ -1,4 +1,4 @@
-﻿apiVersion: networking.k8s.io/v1
+﻿apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: aspnethelloworld-ingress
@@ -7,9 +7,6 @@ spec:
     - http:
         paths:
           - path: /
-            pathType: Prefix
             backend:
-              service:
-                name: asphelloworld-service
-                port:
-                  number: 8080
+              serviceName: asphelloworld-service
+              servicePort: 8080
