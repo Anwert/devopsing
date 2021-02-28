@@ -4,7 +4,7 @@ metadata:
   name: dashboard-ingress
   namespace: kubernetes-dashboard
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
     - http:
