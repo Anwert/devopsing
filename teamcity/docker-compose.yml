@@ -8,7 +8,7 @@ services:
       - ./data_dir:/data/teamcity_server/datadir
       - ./log_dir:/opt/teamcity/logs
   teamcity-agent:
-    image: jetbrains/teamcity-agent:2020.1.3
+    image: jetbrains/teamcity-agent:2019.2.4
     environment:
       - SERVER_URL=http://server:8111
       - AGENT_NAME=regular_agent
