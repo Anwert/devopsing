@@ -2,14 +2,13 @@
 kind: Ingress
 metadata:
   name: aspnethelloworld-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
     - http:
         paths:
-          - path: /app
-            pathType: Prefix
-            backend:
-              service:
-                name: asphelloworld-service
-                port:
-                  number: 80
+          - backend:
+              serviceName: asphelloworld-service
+              servicePort: 80
+            path: /something(/|$)(.*)
