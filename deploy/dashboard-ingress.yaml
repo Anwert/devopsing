@@ -3,12 +3,16 @@ kind: Ingress
 metadata:
   name: dashboard-ingress
   namespace: kubernetes-dashboard
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
     - http:
         paths:
-        - backend:
-            service:
-              name: kubernetes-dashboard
-              port:
-                number: 80
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: test
+                port:
+                  number: 80
