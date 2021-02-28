@@ -6,7 +6,7 @@ spec:
   rules:
     - http:
         paths:
-          - backend:
-              serviceName: asphelloworld-service
+          - path: /
+            backend:
+              serviceName: some-service
               servicePort: 80
-            path: /
