@@ -7,12 +7,8 @@ services:
     volumes:
       - ./data_dir:/data/teamcity_server/datadir
       - ./log_dir:/opt/teamcity/logs
-    restart_policy:
-      condition: on-failure
   teamcity-agent:
     image: jetbrains/teamcity-agent
     environment:
       - SERVER_URL=http://server:8111
       - AGENT_NAME=regular_agent
-    restart_policy:
-      condition: on-failure
