@@ -12,3 +12,5 @@ services:
     environment:
       - SERVER_URL=http://server:8111
       - AGENT_NAME=regular_agent
+    volumes:
+      - ./teamcity_agent_conf:/data/teamcity_agent/conf
