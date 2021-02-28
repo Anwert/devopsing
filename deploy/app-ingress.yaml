@@ -8,5 +8,5 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: some-service
+              serviceName: asphelloworld-service
               servicePort: 80
