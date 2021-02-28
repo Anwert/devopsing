@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: test
+                name: kubernetes-dashboard
                 port:
                   number: 80
