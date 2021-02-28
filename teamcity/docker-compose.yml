@@ -14,6 +14,5 @@ services:
     environment:
       - SERVER_URL=http://server:8111
       - AGENT_NAME=regular_agent
-      - DOCKER_IN_DOCKER=start
     volumes:
       - ./teamcity_agent_conf:/data/teamcity_agent/conf
