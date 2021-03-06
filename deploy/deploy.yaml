@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: asphelloworld
-          image: fkrutakov/asphelloworld
+          image: $HELLO_WORLD_IMAGE
           ports:
             - containerPort: 80
 ---
