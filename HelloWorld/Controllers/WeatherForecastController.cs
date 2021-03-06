@@ -35,5 +35,14 @@ namespace HelloWorld.Controllers
             })
             .ToArray();
         }
+        
+        [HttpGet("test1")]
+        public IActionResult GetTest1()
+        {
+            return Ok(new
+            {
+                Ok = true
+            });
+        }
     }
 }
