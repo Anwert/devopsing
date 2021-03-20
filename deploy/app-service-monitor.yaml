@@ -10,6 +10,7 @@ spec:
   selector:
     matchLabels:
       app: asphelloworld
+  jobLabel: app
   endpoints:
     - port: http
       path: /metrics
