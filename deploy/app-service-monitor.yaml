@@ -2,7 +2,7 @@
 kind: ServiceMonitor
 metadata:
   name: asphelloworld
-  namespace: default
+  namespace: monitoring
   labels:
     app: asphelloworld
     release: prometheus
@@ -11,4 +11,8 @@ spec:
     matchLabels:
       app: asphelloworld
   endpoints:
-    - port: metrics
+    - port: http
+      path: /metrics
+  namespaceSelector:
+    matchNames:
+      - default
