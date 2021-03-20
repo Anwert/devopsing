@@ -1,0 +1,15 @@
+﻿apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: asphelloworld
+  namespace: monitoring
+  labels:
+    app: asphelloworld
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: asphelloworld
+  endpoints:
+    - port: metrics
+      interval: 15
