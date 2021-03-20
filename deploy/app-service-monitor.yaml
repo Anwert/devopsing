@@ -2,7 +2,7 @@
 kind: ServiceMonitor
 metadata:
   name: asphelloworld
-  namespace: monitoring
+  namespace: default
   labels:
     app: asphelloworld
     release: prometheus
