@@ -12,4 +12,3 @@ spec:
       app: asphelloworld
   endpoints:
     - port: metrics
-      interval: 15
