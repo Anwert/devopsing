@@ -36,7 +36,7 @@ namespace HelloWorld.Controllers
             .ToArray();
         }
         
-        [HttpGet("test1234")]
+        [HttpGet("test12345")]
         public IActionResult GetTest1()
         {
             return Ok(new
